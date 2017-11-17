@@ -3,17 +3,27 @@ Vue.component('bar-chart', {
   props: ['data', 'options'],
   mounted () {
     var data = this.data || {
-      labels: [2007,2008,2009,2010,2011,2012,2013,2014,2015],
+      labels: ["AB","BC","MB","NB","NL","NS","NT","ON","PE","QC","SK","YT","NONE Specified"],
       datasets: [
         {
-          label: 'Rhinoceros tués chaque année par le braconnage en Afrique du Sud',
+          label: 'Nombre de victimes',
           backgroundColor: '#f87979',
-          data: [13, null,122,333,448,668,1004,1215,749],
+          data: [92,60,18,10,6,11,0,348,2,189,25,0,6],
           datalabels: {
             align: 'end',
             anchor: 'end'
           }
-        }
+
+        },
+        {
+          label: 'Pertes en dollars',
+          backgroundColor: 'blue',
+          data: [123329.58,44331.04,16918.27,8765.05,1550,4120,0,223692.22,0,116520.37,17046.26,0,11181],
+          datalabels: {
+            align: 'end',
+            anchor: 'end'
+          } 
+        }  
       ]
     };
 
